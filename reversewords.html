@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reverse Words</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    .container {
+        margin-top: 50px;
+    }
+    input[type="text"] {
+        width: 300px;
+        padding: 8px;
+        margin-right: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    button {
+        padding: 8px 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+    #result {
+        margin-top: 20px;
+        font-size: 18px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Reverse Words</h2>
+    <input type="text" id="sentence" placeholder="Enter a sentence">
+    <button onclick="reverseAndDisplay()">Reverse Words</button>
+    <p id="result"></p>
+</div>
+
+<script>
+    function reverseWords(sentence) {
+        const words = sentence.split(" ");
+        const reversedWords = words.reverse();
+        return reversedWords.join(" ");
+    }
+
+    function reverseAndDisplay() {
+        const inputSentence = document.getElementById("sentence").value;
+        const reversedSentence = reverseWords(inputSentence);
+        document.getElementById("result").innerText = "Reversed Sentence: " + reversedSentence;
+    }
+</script>
+
+</body>
+</html>
