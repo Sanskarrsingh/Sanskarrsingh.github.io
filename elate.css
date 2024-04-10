@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300;1,400&display=swap');
 body {
   background-color: #E4D8DB;
+  display: flex;
+  flex-wrap: wrap;
 }
 .card-body{
   background-color: #E4D8DB;
